@@ -20,12 +20,12 @@ const GlobalStye = createGlobalStyle`
     font-family: 'Noto Sans KR', sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center; /* 가로 중앙 정렬 */
-    align-items: center; /* 세로 중앙 정렬 */
+    // display: flex;
+    // justify-content: center; /* 가로 중앙 정렬 */
+    // align-items: center; /* 세로 중앙 정렬 */
     line-height: 1.5;
   }
-
+  
   /* .container{
     max-width: 400px;
     width: 100%;
