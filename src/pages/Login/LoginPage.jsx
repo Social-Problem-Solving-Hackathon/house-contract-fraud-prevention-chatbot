@@ -117,6 +117,7 @@ const Input = styled.input`
   margin: 0.5rem;
   padding: 1rem;
   width: 100%;
+  font-size: 1rem;
   background-color: #ececec;
   border-radius: 10px;
   border: 1px solid #ececec;

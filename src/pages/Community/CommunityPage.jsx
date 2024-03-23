@@ -1,11 +1,9 @@
 import { Layout } from "antd";
 import styled from "styled-components";
-import ChatList from "../../components/Main/ChatList";
 import MainHeader from "../../components/Common/MainHeader";
-import ChatInput from "../../components/Main/ChatInput";
 import MainMenu from "../../components/Common/MainMenu";
 
-const MainPage = () => {
+const CommunityPage = () => {
   return (
     <>
       <LayoutStyled
@@ -15,11 +13,9 @@ const MainPage = () => {
           overflowY: "hidden",
         }}
       >
-        <MainMenu selectedKey={"1"} />
+        <MainMenu selectedKey={"3"} />
         <Container>
           <MainHeader />
-          <ChatList />
-          <ChatInput />
         </Container>
       </LayoutStyled>
     </>
@@ -55,4 +51,4 @@ const Container = styled.div`
   height: 100dvh;
 `;
 
-export default MainPage;
+export default CommunityPage;
