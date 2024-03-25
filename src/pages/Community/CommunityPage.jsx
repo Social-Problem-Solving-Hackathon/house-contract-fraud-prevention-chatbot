@@ -53,9 +53,9 @@ const CommunityPage = () => {
                 자료실
               </MenuButton>
             </MenuButtonBox>
-
             <WriteButton>+ 작성하기</WriteButton>
           </MenuBox>
+          <Explain>* 게시판 설명 글~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</Explain>
           <PostList />
         </Container>
       </LayoutStyled>
@@ -143,6 +143,14 @@ const WriteButton = styled.div`
   &:hover {
     background-color: #237d31;
   }
+`;
+
+const Explain = styled.div`
+  margin-left: 3rem;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #43a046;
 `;
 
 export default CommunityPage;

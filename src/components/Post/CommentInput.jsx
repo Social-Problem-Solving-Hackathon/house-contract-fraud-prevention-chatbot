@@ -1,33 +1,12 @@
-import { LinkOutlined, SendOutlined } from "@ant-design/icons";
-import { useState } from "react";
+import { SendOutlined } from "@ant-design/icons";
 import reactTextareaAutosize from "react-textarea-autosize";
 import styled from "styled-components";
 
-const ChatInput = () => {
-  const [file, setFile] = useState();
-
-  const UploadFile = (e) => {
-    if (e.target.files?.[0]) {
-      const file = e.target.files[0];
-      setFile(file.name);
-      console.log(file.name);
-    }
-  };
-
+const CommentInput = () => {
   return (
     <Container>
       <InputBox>
-        <UploadStyled htmlFor="file">
-          <LinkOutlined style={{ fontSize: "1.5rem" }} />
-        </UploadStyled>
-        <input
-          type="file"
-          name="file"
-          id="file"
-          style={{ display: "none" }}
-          onChange={(e) => UploadFile(e)}
-        />
-        <Input placeholder="무엇이든 물어보세요" cacheMeasurements />
+        <Input placeholder="댓글을 작성해주세요" cacheMeasurements />
       </InputBox>
       <Button>
         <SendOutlined />
@@ -54,7 +33,7 @@ const InputBox = styled.div`
 const Input = styled(reactTextareaAutosize)`
   //margin: 0.5rem;
   padding: 1rem;
-  padding-left: 4rem;
+  padding-left: 3rem;
   width: 50dvw;
   height: 3.2rem;
   font-size: 1.1rem;
@@ -67,12 +46,6 @@ const Input = styled(reactTextareaAutosize)`
   &::-webkit-scrollbar {
     display: none;
   }
-`;
-
-const UploadStyled = styled.label`
-  position: absolute;
-  top: 0.8rem;
-  left: 1.7rem;
 `;
 
 const Button = styled.button`
@@ -88,4 +61,4 @@ const Button = styled.button`
   }
 `;
 
-export default ChatInput;
+export default CommentInput;

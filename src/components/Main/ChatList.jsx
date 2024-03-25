@@ -5,7 +5,6 @@ import Logo from "../../assets/images/logo-color.svg";
 const ChatList = () => {
   return (
     <Container>
-      <div style={{ height: "200%" }}></div>
       <BotChatBox>
         <BotChatImg src={<img src={Logo} alt="chatBot" />} />
         <BotChatText>

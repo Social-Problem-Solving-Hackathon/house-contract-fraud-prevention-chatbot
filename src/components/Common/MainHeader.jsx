@@ -1,4 +1,8 @@
-import { BellOutlined, UserOutlined } from "@ant-design/icons";
+import {
+  BellOutlined,
+  QuestionCircleOutlined,
+  UserOutlined,
+} from "@ant-design/icons";
 import { Avatar, Badge, Popover } from "antd";
 import { useState } from "react";
 import styled from "styled-components";
@@ -91,6 +95,15 @@ const MainHeader = () => {
   return (
     <Container>
       <ButtonContainer>
+        <Avatar
+          style={{
+            backgroundColor: "white",
+            fontSize: "2.1rem",
+            width: "2.1rem",
+            height: "2.1rem",
+          }}
+          icon={<QuestionCircleOutlined style={{ color: "#aab4be" }} />}
+        />
         <Popover
           placement="bottomRight"
           content={content}
