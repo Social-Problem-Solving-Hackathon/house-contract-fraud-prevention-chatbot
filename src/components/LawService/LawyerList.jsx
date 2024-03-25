@@ -3,6 +3,7 @@ import { Carousel } from "antd";
 import { useRef } from "react";
 import styled from "styled-components";
 import Lawyer from "./Lawyer";
+import dummyData from "../../assets/json/lawyerListData.json";
 
 const LawyerList = () => {
   const slider = useRef(null);
@@ -19,27 +20,20 @@ const LawyerList = () => {
           <LeftOutlined style={{ fontSize: "1.5rem" }} />
         </LeftButton>
         <Carousel afterChange={onChange} ref={slider}>
-          {/* <div>
-            <h3 style={contentStyle}>1</h3>
-          </div>
-          <div>
-            <h3 style={contentStyle}>2</h3>
-          </div> */}
-
           <div>
             <LawyerContainer>
-              <Lawyer />
-              <Lawyer />
-              <Lawyer />
-              <Lawyer />
+              <Lawyer item={dummyData[0]} />
+              <Lawyer item={dummyData[1]} />
+              <Lawyer item={dummyData[2]} />
+              <Lawyer item={dummyData[3]} />
             </LawyerContainer>
           </div>
           <div>
             <LawyerContainer>
-              <Lawyer />
-              <Lawyer />
-              <Lawyer />
-              <Lawyer />
+              <Lawyer item={dummyData[4]} />
+              <Lawyer item={dummyData[5]} />
+              <Lawyer item={dummyData[6]} />
+              <Lawyer item={dummyData[7]} />
             </LawyerContainer>
           </div>
         </Carousel>

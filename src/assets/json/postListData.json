@@ -6,7 +6,8 @@
     "writer": "Writer 26",
     "date": "2022.10.12",
     "view": 26,
-    "like": 1
+    "like": 1,
+    "comments": 2
   },
   {
     "key": "25",
@@ -15,7 +16,8 @@
     "writer": "Writer 25",
     "date": "2022.10.05",
     "view": 25,
-    "like": 5
+    "like": 5,
+    "comments": 2
   },
   {
     "key": "24",
@@ -24,7 +26,8 @@
     "writer": "Writer 24",
     "date": "2022.09.28",
     "view": 24,
-    "like": 4
+    "like": 4,
+    "comments": 2
   },
   {
     "key": "23",
@@ -33,7 +36,8 @@
     "writer": "Writer 23",
     "date": "2022.09.21",
     "view": 23,
-    "like": 3
+    "like": 3,
+    "comments": 2
   },
   {
     "key": "22",
@@ -42,7 +46,8 @@
     "writer": "Writer 22",
     "date": "2022.09.14",
     "view": 22,
-    "like": 2
+    "like": 2,
+    "comments": 2
   },
   {
     "key": "21",
@@ -51,7 +56,8 @@
     "writer": "Writer 21",
     "date": "2022.09.07",
     "view": 21,
-    "like": 1
+    "like": 1,
+    "comments": 2
   },
   {
     "key": "20",
@@ -60,7 +66,8 @@
     "writer": "Writer 20",
     "date": "2022.08.31",
     "view": 20,
-    "like": 5
+    "like": 5,
+    "comments": 2
   },
   {
     "key": "19",
@@ -69,7 +76,8 @@
     "writer": "Writer 19",
     "date": "2022.08.24",
     "view": 19,
-    "like": 4
+    "like": 4,
+    "comments": 2
   },
   {
     "key": "18",
@@ -78,7 +86,8 @@
     "writer": "Writer 18",
     "date": "2022.08.17",
     "view": 18,
-    "like": 3
+    "like": 3,
+    "comments": 2
   },
   {
     "key": "17",
@@ -87,7 +96,8 @@
     "writer": "Writer 17",
     "date": "2022.08.10",
     "view": 17,
-    "like": 2
+    "like": 2,
+    "comments": 2
   },
   {
     "key": "16",
@@ -96,7 +106,8 @@
     "writer": "Writer 16",
     "date": "2022.08.03",
     "view": 16,
-    "like": 1
+    "like": 1,
+    "comments": 2
   },
   {
     "key": "15",
@@ -105,7 +116,8 @@
     "writer": "Writer 15",
     "date": "2022.07.27",
     "view": 15,
-    "like": 5
+    "like": 5,
+    "comments": 2
   },
   {
     "key": "14",
@@ -114,7 +126,8 @@
     "writer": "Writer 14",
     "date": "2022.07.20",
     "view": 14,
-    "like": 4
+    "like": 4,
+    "comments": 2
   },
   {
     "key": "13",
@@ -123,7 +136,8 @@
     "writer": "Writer 13",
     "date": "2022.07.13",
     "view": 13,
-    "like": 3
+    "like": 3,
+    "comments": 2
   },
   {
     "key": "12",
@@ -132,7 +146,8 @@
     "writer": "Writer 12",
     "date": "2022.07.06",
     "view": 12,
-    "like": 2
+    "like": 2,
+    "comments": 2
   },
   {
     "key": "11",
@@ -141,7 +156,8 @@
     "writer": "Writer 11",
     "date": "2022.06.29",
     "view": 11,
-    "like": 1
+    "like": 1,
+    "comments": 2
   },
   {
     "key": "10",
@@ -150,7 +166,8 @@
     "writer": "Writer 10",
     "date": "2022.06.22",
     "view": 10,
-    "like": 5
+    "like": 5,
+    "comments": 2
   },
   {
     "key": "9",
@@ -159,7 +176,8 @@
     "writer": "Writer 9",
     "date": "2022.06.15",
     "view": 9,
-    "like": 4
+    "like": 4,
+    "comments": 2
   },
   {
     "key": "8",
@@ -168,7 +186,8 @@
     "writer": "Writer 8",
     "date": "2022.06.08",
     "view": 8,
-    "like": 3
+    "like": 3,
+    "comments": 2
   },
   {
     "key": "7",
@@ -177,7 +196,8 @@
     "writer": "Writer 7",
     "date": "2022.06.01",
     "view": 7,
-    "like": 2
+    "like": 2,
+    "comments": 2
   },
   {
     "key": "6",
@@ -186,7 +206,8 @@
     "writer": "Writer 6",
     "date": "2022.05.25",
     "view": 6,
-    "like": 1
+    "like": 1,
+    "comments": 2
   },
   {
     "key": "5",
@@ -195,7 +216,8 @@
     "writer": "Writer 5",
     "date": "2022.05.18",
     "view": 5,
-    "like": 5
+    "like": 5,
+    "comments": 2
   },
   {
     "key": "4",
@@ -204,7 +226,8 @@
     "writer": "Writer 4",
     "date": "2022.05.11",
     "view": 4,
-    "like": 4
+    "like": 4,
+    "comments": 2
   },
   {
     "key": "3",
@@ -213,6 +236,7 @@
     "writer": "Writer 3",
     "date": "2022.05.04",
     "view": 3,
-    "like": 3
+    "like": 3,
+    "comments": 2
   }
 ]

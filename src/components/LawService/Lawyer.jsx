@@ -1,16 +1,17 @@
+/* eslint-disable react/prop-types */
 import { Avatar } from "antd";
 import styled from "styled-components";
 
-const Lawyer = () => {
+const Lawyer = ({ item }) => {
   return (
     <Container>
       <Avatar
-        src="https://api.dicebear.com/7.x/miniavs/svg?seed=1"
+        src={item.profile}
         style={{ border: "1px solid black", width: "4rem", height: "4rem" }}
       />
       <ContentBox>
-        <Name>000 변호사</Name>
-        <Explain>000 법률 사무소</Explain>
+        <Name>{item.name}</Name>
+        <Explain>{item.company}</Explain>
       </ContentBox>
     </Container>
   );
