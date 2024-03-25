@@ -1,5 +1,6 @@
 import { LinkOutlined, SendOutlined } from "@ant-design/icons";
 import { useState } from "react";
+import reactTextareaAutosize from "react-textarea-autosize";
 import styled from "styled-components";
 
 const ChatInput = () => {
@@ -26,7 +27,7 @@ const ChatInput = () => {
           style={{ display: "none" }}
           onChange={(e) => UploadFile(e)}
         />
-        <Input placeholder="무엇이든 물어보세요" />
+        <Input placeholder="무엇이든 물어보세요" cacheMeasurements />
       </InputBox>
       <Button>
         <SendOutlined />
@@ -39,7 +40,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 0.5rem;
+  gap: 1rem;
   width: inherit;
   padding: 2rem;
   padding-top: 0;
@@ -50,7 +51,7 @@ const InputBox = styled.div`
   position: relative;
 `;
 
-const Input = styled.textarea`
+const Input = styled(reactTextareaAutosize)`
   //margin: 0.5rem;
   padding: 1rem;
   padding-left: 4rem;
@@ -75,8 +76,8 @@ const UploadStyled = styled.label`
 `;
 
 const Button = styled.button`
-  width: 3rem;
-  height: 3rem;
+  width: 3.5rem;
+  height: 3.5rem;
   color: white;
   background-color: #66bb69;
   border-radius: 50%;

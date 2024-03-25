@@ -21,14 +21,14 @@ function getItem(label, key, icon, children) {
 }
 const items = [
   getItem("서류 검토 챗봇", "1", <CommentOutlined />),
-  getItem("법률서비스 중개", "2", <ContactsOutlined />),
-  getItem("Community", "3", <TeamOutlined />),
   getItem("history", "sub2", <HistoryOutlined />, [
     getItem("채팅1~~~~", "5"),
     getItem("채팅2~~~~", "6"),
     getItem("채팅3~~~~", "7"),
     getItem("채팅4~~~~", "8"),
   ]),
+  getItem("법률서비스 중개", "2", <ContactsOutlined />),
+  getItem("Community", "3", <TeamOutlined />),
 ];
 
 const MainMenu = ({ selectedKey }) => {
