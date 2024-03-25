@@ -1,6 +1,7 @@
 import { Table, Tooltip } from "antd";
 import styled from "styled-components";
 import dummyData from "../../assets/json/postListData.json";
+import { useNavigate } from "react-router-dom";
 
 const columns = [
   {
@@ -46,22 +47,39 @@ const columns = [
     key: "like",
     width: 80,
   },
+  {
+    title: "댓글수",
+    dataIndex: "comments",
+    key: "comments",
+    width: 80,
+  },
 ];
 
 const PostList = () => {
+  const navigate = useNavigate();
+
   return (
     <Container>
       <TableStyled
         columns={columns}
         dataSource={dummyData}
         pagination={{ position: ["bottomCenter"] }}
+        onRow={(record, rowIndex) => {
+          return {
+            onClick: () => {
+              console.log(record, rowIndex);
+              navigate("/post");
+            },
+          };
+        }}
       />
     </Container>
   );
 };
 
 const Container = styled.div`
-  padding: 3rem;
+  padding: 2rem 3rem;
+  padding-top: 0.5rem;
 `;
 
 const TableStyled = styled(Table)`
