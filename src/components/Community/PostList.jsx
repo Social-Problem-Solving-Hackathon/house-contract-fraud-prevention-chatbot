@@ -1,6 +1,9 @@
 import { Table, Tooltip } from "antd";
 import styled from "styled-components";
-import dummyData from "../../assets/json/postListData.json";
+import freeBoardData from "../../assets/json/freeBoardData.json";
+import incidentSharingBoardData from "../../assets/json/IncidentSharingBoardData.json";
+import healingBoardData from "../../assets/json/healingBoardData.json";
+import realEstateBoardData from "../../assets/json/realEstateEstimationBoardData.json";
 import { useNavigate } from "react-router-dom";
 
 const columns = [
@@ -11,7 +14,7 @@ const columns = [
     width: 80,
   },
   {
-    title: "제목",
+    title: "Title",
     dataIndex: "title",
     key: "title",
     ellipsis: {
@@ -24,45 +27,56 @@ const columns = [
     ),
   },
   {
-    title: "작성자",
+    title: "Writer",
     dataIndex: "writer",
     key: "writer",
     width: 150,
   },
   {
-    title: "작성일",
+    title: "Date",
     dataIndex: "date",
     key: "date",
     width: 150,
   },
   {
-    title: "조회수",
+    title: "Views",
     dataIndex: "view",
     key: "view",
     width: 80,
   },
   {
-    title: "추천수",
+    title: "Likes",
     dataIndex: "like",
     key: "like",
     width: 80,
   },
   {
-    title: "댓글수",
+    title: "Comments",
     dataIndex: "comments",
     key: "comments",
-    width: 80,
+    width: 120,
   },
 ];
 
-const PostList = () => {
+const PostList = ({ selectedMenu }) => {
   const navigate = useNavigate();
 
+  const selectedData = () => {
+    if (selectedMenu === 0) {
+      return freeBoardData;
+    } else if (selectedMenu === 1) {
+      return incidentSharingBoardData;
+    } else if (selectedMenu === 2) {
+      return healingBoardData;
+    } else if (selectedMenu === 3) {
+      return realEstateBoardData;
+    }
+  };
   return (
     <Container>
       <TableStyled
         columns={columns}
-        dataSource={dummyData}
+        dataSource={selectedData()}
         pagination={{ position: ["bottomCenter"] }}
         onRow={(record, rowIndex) => {
           return {

@@ -1,11 +1,51 @@
 import { Avatar } from "antd";
 import styled from "styled-components";
 import Logo from "../../assets/images/logo-color.svg";
+import { useEffect, useRef } from "react";
 
-const ChatList = () => {
+const ChatList = ({ chatData }) => {
+  const chatEndRef = useRef(null);
+
+  useEffect(() => {
+    chatEndRef.current.scrollIntoView({ behavior: "smooth" });
+  }, [chatData]);
+
   return (
     <Container>
-      <BotChatBox>
+      {chatData.map((item) =>
+        item?.isBot ? (
+          <BotChatBox key={item.id}>
+            <BotChatProfileBox>
+              <BotChatImg src={<img src={Logo} alt="chatBot" />} />
+              <BotChatProfileText>안심전세봇</BotChatProfileText>
+            </BotChatProfileBox>
+            <BotChatTextBox>
+              {item?.content.map((value, index) => (
+                <BotChatText key={index}>{value}</BotChatText>
+              ))}
+              {/* <BotChatText>
+                ㅇ니라댈ㄷㅎ궈륲ㄴ두팯갸호재ㅑ겨호ㅠ댜겋
+                ㅣ자댜ㅜ래댜로갸허ㅠㄱㅇ니라댈ㄷㅎ궈륲ㄴ두팯갸호재ㅑ겨호ㅠ댜겋
+                ㅣ자댜ㅜ래댜로갸허ㅠㄱ
+              </BotChatText>
+              <BotChatText>ㅇ니라댈ㄷㅎ궈륲ㄴ</BotChatText>
+              <BotChatText>
+                ㅇ니라댈ㄷㅎ궈륲ㄴ두팯갸호재ㅑ겨호ㅠ댜겋
+                ㅣ자댜ㅜ래댜로갸허ㅠㄱㅇ니라댈ㄷㅎ궈륲ㄴ두팯갸호재ㅑ겨호ㅠ댜겋
+                ㅣ자댜ㅜ래댜로갸허ㅠㄱㅇ니라댈ㄷㅎ궈륲ㄴ두팯갸호재ㅑ겨호ㅠ댜겋
+                ㅣ자댜ㅜ래댜로갸허ㅠㄱㅇ니라댈ㄷㅎ궈륲ㄴ두팯갸호재ㅑ겨호ㅠ댜겋
+                ㅣ자댜ㅜ래댜로갸허ㅠㄱ
+              </BotChatText> */}
+            </BotChatTextBox>
+          </BotChatBox>
+        ) : (
+          <MyChatBox key={item.id}>
+            <MyChatText>{item.content[0]}</MyChatText>
+          </MyChatBox>
+        )
+      )}
+
+      {/* <BotChatBox>
         <BotChatImg src={<img src={Logo} alt="chatBot" />} />
         <BotChatText>
           ㅇ니라댈ㄷㅎ궈륲ㄴ두팯갸호재ㅑ겨호ㅠ댜겋
@@ -34,22 +74,8 @@ const ChatList = () => {
           ㅣ자댜ㅜ래댜로갸허ㅠㄱㅇ니라댈ㄷㅎ궈륲ㄴ두팯갸호재ㅑ겨호ㅠ댜겋
           ㅣ자댜ㅜ래댜로갸허ㅠㄱ
         </MyChatText>
-      </MyChatBox>
-      <BotChatBox>
-        <BotChatImg src={<img src={Logo} alt="chatBot" />} />
-        <BotChatText>
-          ㅇ니라댈ㄷㅎ궈륲ㄴ두팯갸호재ㅑ겨호ㅠ댜겋
-          ㅣ자댜ㅜ래댜로갸허ㅠㄱㅇ니라댈ㄷㅎ궈륲ㄴ두팯갸호재ㅑ겨호ㅠ댜겋
-          ㅣ자댜ㅜ래댜로갸허ㅠㄱ
-        </BotChatText>
-      </BotChatBox>
-      <MyChatBox>
-        <MyChatText>
-          ㅇ니라댈ㄷㅎ궈륲ㄴ두팯갸호재ㅑ겨호ㅠ댜겋
-          ㅣ자댜ㅜ래댜로갸허ㅠㄱㅇ니라댈ㄷㅎ궈륲ㄴ두팯갸호재ㅑ겨호ㅠ댜겋
-          ㅣ자댜ㅜ래댜로갸허ㅠㄱ
-        </MyChatText>
-      </MyChatBox>
+      </MyChatBox> */}
+      <div ref={chatEndRef}></div>
     </Container>
   );
 };
@@ -70,11 +96,30 @@ const BotChatBox = styled.div`
   gap: 10px;
 `;
 
+const BotChatProfileBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
 const BotChatImg = styled(Avatar)`
   width: 3rem;
   height: 3rem;
   border: 2px solid #1b5e1f;
   box-shadow: 0px 0px 5px 1px rgb(195, 195, 195);
+`;
+
+const BotChatProfileText = styled.div`
+  color: #1b5e1f;
+  font-size: 0.9rem;
+  font-weight: 700;
+`;
+
+const BotChatTextBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.7rem;
 `;
 
 const BotChatText = styled.div`
