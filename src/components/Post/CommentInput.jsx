@@ -6,7 +6,7 @@ const CommentInput = () => {
   return (
     <Container>
       <InputBox>
-        <Input placeholder="댓글을 작성해주세요" cacheMeasurements />
+        <Input placeholder="Please write a comment.." cacheMeasurements />
       </InputBox>
       <Button>
         <SendOutlined />

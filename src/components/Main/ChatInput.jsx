@@ -3,7 +3,8 @@ import { useState } from "react";
 import reactTextareaAutosize from "react-textarea-autosize";
 import styled from "styled-components";
 
-const ChatInput = () => {
+const ChatInput = ({ onSubmit }) => {
+  const [value, setValue] = useState("");
   const [file, setFile] = useState();
 
   const UploadFile = (e) => {
@@ -11,7 +12,14 @@ const ChatInput = () => {
       const file = e.target.files[0];
       setFile(file.name);
       console.log(file.name);
+      // 파일 이름 첨부
+      setValue(`"${file.name}" upload`);
     }
+  };
+
+  const onClickSendButton = () => {
+    onSubmit(value);
+    setValue("");
   };
 
   return (
@@ -27,9 +35,14 @@ const ChatInput = () => {
           style={{ display: "none" }}
           onChange={(e) => UploadFile(e)}
         />
-        <Input placeholder="무엇이든 물어보세요" cacheMeasurements />
+        <Input
+          placeholder="무엇이든 물어보세요"
+          cacheMeasurements
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+        />
       </InputBox>
-      <Button>
+      <Button onClick={() => onClickSendButton()}>
         <SendOutlined />
       </Button>
     </Container>

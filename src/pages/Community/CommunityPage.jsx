@@ -7,6 +7,17 @@ import { useState } from "react";
 
 const CommunityPage = () => {
   const [selectedMenu, setSelectedMenu] = useState(0);
+  const selectedMenuExplain = () => {
+    if (selectedMenu === 0) {
+      return "* This is a bulletin board that freely shares various opinions.";
+    } else if (selectedMenu === 1) {
+      return "* This is a bulletin board that shares cases of Jeonse Fraud";
+    } else if (selectedMenu === 2) {
+      return "* This is a bulletin board that shares good news and new information.";
+    } else if (selectedMenu === 3) {
+      return "* This is a bulletin board that shares information related to real estate.";
+    }
+  };
 
   return (
     <>
@@ -26,37 +37,31 @@ const CommunityPage = () => {
                 className={selectedMenu === 0 && "selectedMenuButton"}
                 onClick={() => setSelectedMenu(0)}
               >
-                피해 사례 공유 게시판
+                Free Board
               </MenuButton>
               <MenuButton
                 className={selectedMenu === 1 && "selectedMenuButton"}
                 onClick={() => setSelectedMenu(1)}
               >
-                자유 게시판
+                Jeonse Fraud Sharing Board
               </MenuButton>
               <MenuButton
                 className={selectedMenu === 2 && "selectedMenuButton"}
                 onClick={() => setSelectedMenu(2)}
               >
-                힐링 게시판
+                Healing Board
               </MenuButton>
               <MenuButton
                 className={selectedMenu === 3 && "selectedMenuButton"}
                 onClick={() => setSelectedMenu(3)}
               >
-                부동산 정보 게시판
-              </MenuButton>
-              <MenuButton
-                className={selectedMenu === 4 && "selectedMenuButton"}
-                onClick={() => setSelectedMenu(4)}
-              >
-                자료실
+                Real Estate Information Board
               </MenuButton>
             </MenuButtonBox>
-            <WriteButton>+ 작성하기</WriteButton>
+            <WriteButton>+ Write</WriteButton>
           </MenuBox>
-          <Explain>* 게시판 설명 글~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~</Explain>
-          <PostList />
+          <Explain>{selectedMenuExplain()}</Explain>
+          <PostList selectedMenu={selectedMenu} />
         </Container>
       </LayoutStyled>
     </>
