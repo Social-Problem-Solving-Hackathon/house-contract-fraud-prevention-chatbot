@@ -3,9 +3,13 @@ import styled from "styled-components";
 import MainHeader from "../../components/Common/MainHeader";
 import MainMenu from "../../components/Common/MainMenu";
 import CommentInput from "../../components/Post/CommentInput";
-import { UserOutlined } from "@ant-design/icons";
+import { LikeOutlined, LikeTwoTone, UserOutlined } from "@ant-design/icons";
+import PostImg from "../../assets/images/post-img.png";
+import { useState } from "react";
 
 const PostPage = () => {
+  const [isLiked, setIsLiked] = useState(false);
+
   return (
     <>
       <LayoutStyled
@@ -15,12 +19,12 @@ const PostPage = () => {
           overflowY: "hidden",
         }}
       >
-        <MainMenu selectedKey={"1"} />
+        <MainMenu selectedKey={"3"} />
         <Container>
           <MainHeader />
           <ContentContainer>
             <PostContainer>
-              <Title>제목네ㅑ러ㅐㄱ햊댜러ㅐㄷ쟈루ㅐ쟈ㅜㅐㅈ갸러ㅐㅈ댜러</Title>
+              <Title>Found a Hidden Gem Apartment! 🏠✨</Title>
               <Writer>
                 <Avatar
                   style={{
@@ -32,43 +36,68 @@ const PostPage = () => {
                   icon={<UserOutlined />}
                 />
                 <div>
-                  000 작성자
+                  Andrew
                   <br />
                   <Date>2023.03.03</Date>
                 </div>
               </Writer>
               <Content>
-                foweifhorigjpwiofpwoefkmsdkn
-                vefogrrnoignwfmwpenknforgiowrinwpefmpeo 종일 바쁜 일상에서
-                우리는 종종 내면의 평화와 안정을 잃어버리곤 합니다. 하지만
-                다행스럽게도 명상은 이러한 혼란된 마음을 진정시키고 안도를 찾을
-                수 있는 강력한 도구입니다. 바쁜 스케줄 사이에서 조금의 시간을
-                내어 명상을 실천함으로써 우리는 내면의 조용함과 안정을 되찾을 수
-                있습니다. 이 글에서는 바쁜 삶 속에서도 실천할 수 있는 몇 가지
-                간단한 명상 기법을 소개하고, 그 효과에 대해 살펴보겠습니다. 함께
-                명상을 통해 내면의 평화를 찾아봅시다.
+                Hey friends! Guess what? I just found this incredible apartment
+                that's a total steal, and I had to share with you all. It's a
+                quaint one-bedroom spot in a quieter part of the city, but get
+                this - it's got the most adorable little patio space. 🌿 <br />
+                The best part? Rent is way below what I expected for the area. I
+                was on the hunt for weeks and stumbled upon this listing by pure
+                luck. 🍀
+                <br /> For anyone else looking, my biggest tip is to check out
+                lesser-known rental sites and don't be afraid to ask around.
+                Sometimes, the best deals aren't the most advertised!
+                <br /> Here's a peek at the patio - I'm already imagining
+                morning coffees and evening reads here.
               </Content>
-              <Explain>조회수 26 | 좋아요 1 | 댓글 3</Explain>
+              <Img src={PostImg} />
+              <Content>
+                If you're in the market, keep your eyes peeled and your spirits
+                high.
+                <br /> Your perfect place could be just around the corner!
+              </Content>
+              <ContentBottom>
+                {isLiked ? (
+                  <LikeButton onClick={() => setIsLiked(false)}>
+                    <LikeTwoTone twoToneColor={"red"} /> | 4
+                  </LikeButton>
+                ) : (
+                  <LikeButton onClick={() => setIsLiked(true)}>
+                    <LikeOutlined /> | 3
+                  </LikeButton>
+                )}
+                <Explain>조회수 26 | 댓글 3</Explain>
+              </ContentBottom>
               <CommentContainer>
                 <CommentBox>
-                  <CommentWriter>000 작성자</CommentWriter>
+                  <CommentWriter>PatioDreams</CommentWriter>
                   <CommentContent>
-                    {" "}
-                    바쁜 스케줄 사이에서 조금의 시간을 내어 명상을 실천함으로써
-                    우리는 내면의 조용함과 안정을 되찾을 수 있습니다. 이
-                    글에서는 바쁜 삶 속에서도 실천할 수 있는 몇 가지 간단한 명상
-                    기법을 소개하고,
+                    Love the patio vibes! 🌼 It looks so peaceful. Great find!
                   </CommentContent>
+                  <CommentDate>2023.04.05</CommentDate>
                 </CommentBox>
                 <CommentBox>
-                  <CommentWriter>000 작성자</CommentWriter>
+                  <CommentWriter>BudgetHunter</CommentWriter>
                   <CommentContent>
-                    {" "}
-                    바쁜 스케줄 사이에서 조금의 시간을 내어 명상을 실천함으로써
-                    우리는 내면의 조용함과 안정을 되찾을 수 있습니다. 이
-                    글에서는 바쁜 삶 속에서도 실천할 수 있는 몇 가지 간단한 명상
-                    기법을 소개하고,
+                    Wow, that's amazing! Could you share which rental sites you
+                    used? I'm on the hunt too and could use all the help I can
+                    get.
                   </CommentContent>
+                  <CommentDate>2023.04.06</CommentDate>
+                </CommentBox>
+                <CommentBox>
+                  <CommentWriter>MorningBrewFan</CommentWriter>
+                  <CommentContent>
+                    That patio is perfect for a coffee lover. Congrats on
+                    snagging such a great spot! Can't wait to see how you
+                    decorate it.
+                  </CommentContent>
+                  <CommentDate>2023.05.10</CommentDate>
                 </CommentBox>
               </CommentContainer>
             </PostContainer>
@@ -156,6 +185,23 @@ const Content = styled.div`
   line-height: 2rem;
 `;
 
+const ContentBottom = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const LikeButton = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1rem;
+  border-radius: 5rem;
+  border: 1px solid gray;
+  background-color: transparent;
+  font-size: 1rem;
+`;
+
 const Explain = styled.div`
   align-self: flex-end;
   margin: 2rem 0;
@@ -177,14 +223,14 @@ const CommentContainer = styled.div`
 const CommentBox = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 1.5rem 2rem;
+  padding: 1rem 2rem;
   width: inherit;
   border-radius: 1rem;
   border: 1px solid gray;
 `;
 
 const CommentWriter = styled.div`
-  padding-bottom: 0.5rem;
+  padding: 0.5rem 0;
   font-size: 1.1rem;
   font-weight: 600;
   color: green;
@@ -194,6 +240,19 @@ const CommentContent = styled.div`
   font-size: 1rem;
   font-weight: 400;
   color: black;
+`;
+
+const CommentDate = styled.div`
+  align-self: flex-end;
+  //margin: 2rem 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: gray;
+`;
+
+const Img = styled.img`
+  align-self: center;
+  width: 30rem;
 `;
 
 export default PostPage;
