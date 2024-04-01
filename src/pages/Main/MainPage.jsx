@@ -1,10 +1,10 @@
-import { Layout } from "antd";
+import { Layout, Spin } from "antd";
 import styled from "styled-components";
 import ChatList from "../../components/Main/ChatList";
 import MainHeader from "../../components/Common/MainHeader";
 import ChatInput from "../../components/Main/ChatInput";
 import MainMenu from "../../components/Common/MainMenu";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const initialData = [
   {
@@ -110,6 +110,13 @@ const answerData = [
 const MainPage = () => {
   const [chatData, setChatData] = useState(initialData);
   const [step, setStep] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
+
+  let timer;
+
+  useEffect(() => {
+    return () => clearTimeout(timer);
+  }, []);
 
   const onSubmit = (text) => {
     if (text == "") {
@@ -123,14 +130,18 @@ const MainPage = () => {
       content: [text],
     };
     setChatData((prev) => [...prev, chat]);
-    // 추가해
-    let Answer = {
-      id: answerData[step - 1].id,
-      isBot: true,
-      content: answerData[step - 1].answer,
-    };
-    setChatData((prev) => [...prev, Answer]);
-    setStep(step + 1);
+    setIsLoading(true);
+    timer = setTimeout(() => {
+      let Answer = {
+        id: answerData[step - 1].id,
+        isBot: true,
+        content: answerData[step - 1].answer,
+      };
+      setChatData((prev) => [...prev, Answer]);
+      setStep(step + 1);
+      setIsLoading(false);
+    }, 2000);
+    // 답변 추가해
   };
 
   return (
@@ -146,6 +157,7 @@ const MainPage = () => {
         <Container>
           <MainHeader />
           <ChatList chatData={chatData} />
+          {isLoading && <Spin size="large" style={{ margin: "2rem" }} />}
           <ChatInput onSubmit={onSubmit} />
         </Container>
       </LayoutStyled>
