@@ -50,7 +50,7 @@ const ChatInput = ({ onSubmit }) => {
             onChange={(e) => UploadFile(e)}
           /> */}
           <Input
-            placeholder="무엇이든 물어보세요"
+            placeholder="Ask me anything!"
             cacheMeasurements
             value={value}
             onChange={(e) => setValue(e.target.value)}
