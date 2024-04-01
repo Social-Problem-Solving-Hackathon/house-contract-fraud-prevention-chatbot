@@ -60,7 +60,7 @@ const MainMenu = ({ selectedKey }) => {
           <LogoUnCollapsed>
             <LogoContainer>
               <Img src={Logo} />
-              <LogoText>안심전세봇</LogoText>
+              <LogoText>Safety Jeonse Bot</LogoText>
             </LogoContainer>
           </LogoUnCollapsed>
         ) : (
@@ -73,7 +73,7 @@ const MainMenu = ({ selectedKey }) => {
         {!collapsed ? (
           <InputStyled
             size="large"
-            placeholder="새 채팅 시작"
+            placeholder="Start a new chat"
             prefix={<PlusOutlined />}
           />
         ) : (
@@ -114,7 +114,7 @@ const SiderStyled = styled(Sider)`
   .ant-menu-inline .ant-menu-submenu-title {
     margin-block: 10px;
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     height: 50px;
     //color: #1b5e1f;
   }
@@ -172,7 +172,7 @@ const LogoContainer = styled.div`
 const LogoText = styled.div`
   width: 10rem;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: #1b5e1f;
 `;
 

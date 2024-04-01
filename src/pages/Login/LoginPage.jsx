@@ -23,7 +23,7 @@ const LoginPage = () => {
         <ExplainContainer>
           <LogoContainer>
             <Img src={Logo} />
-            <LogoText>안심 전세봇</LogoText>
+            <LogoText>Safety Jeonse Bot</LogoText>
           </LogoContainer>
           <Explain>
             One-stop jeonse fraud prevention service that solves from document
@@ -85,7 +85,6 @@ const Img = styled.img`
 `;
 
 const LogoText = styled.div`
-  //margin: 1rem 0;
   font-size: 2.5rem;
   font-weight: 900;
   color: #103e13;
@@ -93,16 +92,17 @@ const LogoText = styled.div`
 
 const Explain = styled.div`
   margin-top: 0.5rem;
-  width: 17rem;
+  width: 20rem;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 2rem;
   color: #ffffff;
+  text-align: center;
 `;
 
 const Title = styled.div`
   margin: 1rem 0;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 900;
   color: #4caf4f;
 `;

@@ -76,6 +76,7 @@ const AlertContainter = styled.div`
   width: 30rem;
   max-height: 60dvh;
   overflow-y: scroll;
+  color: black;
 `;
 
 const AlertTabContainer = styled.div`

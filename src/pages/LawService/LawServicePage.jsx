@@ -26,23 +26,25 @@ const LawServicePage = () => {
           <MainHeader />
           <MenuContainer>
             <BannerBox>
-              <BannerTitle>신속하고 정확한 법률 서비스 중개</BannerTitle>
-              <BannerText>전세 사기를 당하셨나요? 여기로 오세요!</BannerText>
-              <BannerText>전세 사기 피해를 최소화해드립니다</BannerText>
+              <BannerTitle>
+                Quick and accurate brokering legal services{" "}
+              </BannerTitle>
+              <BannerText>Did you get Jeonse Fraud? Come here!</BannerText>
+              <BannerText>We can minimize damage to Jones Fraud.</BannerText>
               <BannerButton>
-                질문하기
+                Ask questions
                 <RightCircleFilled />
               </BannerButton>
             </BannerBox>
             <ButtonBox>
               <Button>
-                <ButtonText>상담 예약</ButtonText>
+                <ButtonText>consultation reservation</ButtonText>
                 <ButtonIcon>
                   <ScheduleTwoTone style={{ fontSize: "1.5rem" }} />
                 </ButtonIcon>
               </Button>
               <Button>
-                <ButtonText>상담글 작성</ButtonText>
+                <ButtonText>Write consultation articles</ButtonText>
                 <ButtonIcon>
                   <EditTwoTone
                     twoToneColor={"#52c41a"}
@@ -51,7 +53,7 @@ const LawServicePage = () => {
                 </ButtonIcon>
               </Button>
               <Button>
-                <ButtonText>빠른 상담</ButtonText>
+                <ButtonText>quick consultation</ButtonText>
                 <ButtonIcon>
                   <PhoneTwoTone
                     twoToneColor={"gray"}
@@ -60,7 +62,7 @@ const LawServicePage = () => {
                 </ButtonIcon>
               </Button>
               <Button>
-                <ButtonText>후기</ButtonText>
+                <ButtonText>review</ButtonText>
                 <ButtonIcon>
                   <LikeTwoTone
                     twoToneColor={"#eb2f96"}
@@ -155,6 +157,7 @@ const BannerText = styled.div`
   color: #4d3d01;
   font-weight: 600;
   font-size: 1.2rem;
+  text-align: start;
 `;
 
 const ButtonBox = styled.div`

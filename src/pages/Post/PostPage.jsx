@@ -43,22 +43,24 @@ const PostPage = () => {
               </Writer>
               <Content>
                 Hey friends! Guess what? I just found this incredible apartment
-                that's a total steal, and I had to share with you all. It's a
-                quaint one-bedroom spot in a quieter part of the city, but get
-                this - it's got the most adorable little patio space. 🌿 <br />
+                that&apos;s a total steal, and I had to share with you all.
+                It&apos;s a quaint one-bedroom spot in a quieter part of the
+                city, but get this - it&apos;s got the most adorable little
+                patio space. 🌿 <br />
                 The best part? Rent is way below what I expected for the area. I
                 was on the hunt for weeks and stumbled upon this listing by pure
                 luck. 🍀
                 <br /> For anyone else looking, my biggest tip is to check out
-                lesser-known rental sites and don't be afraid to ask around.
-                Sometimes, the best deals aren't the most advertised!
-                <br /> Here's a peek at the patio - I'm already imagining
-                morning coffees and evening reads here.
+                lesser-known rental sites and don&apos;t be afraid to ask
+                around. Sometimes, the best deals aren&apos;t the most
+                advertised!
+                <br /> Here&apos;s a peek at the patio - I&apos;m already
+                imagining morning coffees and evening reads here.
               </Content>
               <Img src={PostImg} />
               <Content>
-                If you're in the market, keep your eyes peeled and your spirits
-                high.
+                If you&apos;re in the market, keep your eyes peeled and your
+                spirits high.
                 <br /> Your perfect place could be just around the corner!
               </Content>
               <ContentBottom>
@@ -71,7 +73,7 @@ const PostPage = () => {
                     <LikeOutlined /> | 3
                   </LikeButton>
                 )}
-                <Explain>Likes 26 | Comments 3</Explain>
+                <Explain>Views 26 | Comments 3</Explain>
               </ContentBottom>
               <CommentContainer>
                 <CommentBox>
@@ -84,9 +86,9 @@ const PostPage = () => {
                 <CommentBox>
                   <CommentWriter>BudgetHunter</CommentWriter>
                   <CommentContent>
-                    Wow, that's amazing! Could you share which rental sites you
-                    used? I'm on the hunt too and could use all the help I can
-                    get.
+                    Wow, that&apos;s amazing! Could you share which rental sites
+                    you used? I&apos;m on the hunt too and could use all the
+                    help I can get.
                   </CommentContent>
                   <CommentDate>2023.04.06</CommentDate>
                 </CommentBox>
@@ -94,7 +96,7 @@ const PostPage = () => {
                   <CommentWriter>MorningBrewFan</CommentWriter>
                   <CommentContent>
                     That patio is perfect for a coffee lover. Congrats on
-                    snagging such a great spot! Can't wait to see how you
+                    snagging such a great spot! Can&apos;t wait to see how you
                     decorate it.
                   </CommentContent>
                   <CommentDate>2023.05.10</CommentDate>
