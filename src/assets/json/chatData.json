@@ -1,40 +1,20 @@
-import { Layout } from "antd";
-import styled from "styled-components";
-import ChatList from "../../components/Main/ChatList";
-import MainHeader from "../../components/Common/MainHeader";
-import ChatInput from "../../components/Main/ChatInput";
-import MainMenu from "../../components/Common/MainMenu";
-import { useState } from "react";
-
-const initialData = [
+[
   {
     id: 1,
-    isBot: true,
-    content: [
-      "Hello, I'm SafetyJeonseBot!",
-      "I will guide you through the entire process and help assess the risk of a Jeonse fraud together. Let's start by confirming if the information on the documents matches what you already know. Please provide the actual address of the property you intend to lease.",
-    ],
-  },
-];
-
-const answerData = [
-  {
-    id: 101,
     answer: ["Please provide the name of the homeowner."],
   },
   {
-    id: 102,
+    id: 2,
     answer: [
       "Please provide the resident registration number of the homeowner.",
     ],
   },
   {
-    id: 103,
+    id: 3,
     answer: ["Please provide the residential address of the homeowner."],
   },
   {
-    id: 104,
-    // 링크 이동 버튼으로 만들기!
+    id: 4,
     answer: [
       `Document Verification`,
       `Please go to the link provided below and download the documents in PDF format for assessment to determine if there is a risk of a housing lease fraud: 
@@ -47,8 +27,8 @@ const answerData = [
     ],
   },
   {
-    id: 105,
-    // 근데 이거는 디자인 다르게 하자!
+    id: 5,
+    // 근데 이거는 디자인 다르게 하자! 아예 컴포넌트를 반환할까?
     answer: [
       `I have reviewed the document ‘Certificate of Real Estate Registration’. `,
       `Here are the findings:
@@ -66,8 +46,7 @@ const answerData = [
     ],
   },
   {
-    id: 106,
-    // 근데 이거는 디자인 다르게 하자!
+    id: 6,
     answer: [
       `I have reviewed the document ‘Certificate of Tax Payment’.`,
       `This step is to verify if the homeowner has any outstanding national tax payments.
@@ -77,28 +56,27 @@ const answerData = [
       Based on the review of the Certificate of Tax Payment, no signs of Jeonse fraud have been detected.
       `,
       `All document reviews have been completed.`,
-      // 결제 부분도 다르게!
       `Out of the 4 documents reviewed, Jeonse fraud risks were detected in the ‘Certificate of Real Estate Registration’ and ‘Building Register’.
-      For a safe Jeonse contract, we recommend directly verifying these documents.`,
-      // `To ensure a more accurate assessment of Jeonse fraud risks, you can pay 5,000 won and receive document review directly from a certified real estate agent.
-      // Would you like to use this paid service?
-      // `,
+      For a safe Jeonse contract, we recommend directly verifying these documents.
+      To ensure a more accurate assessment of Jeonse fraud risks, you can pay 5,000 won and receive document review directly from a certified real estate agent.
+      Would you like to use this paid service?
+      `,
     ],
   },
   {
-    id: 107,
+    id: 7,
     answer: [
       "Types of Jeonse fraud include cases where a representative engages in dual contracts or where a single house is contracted with multiple tenants.",
     ],
   },
   {
-    id: 108,
+    id: 8,
     answer: [
       `The ratio of the gross floor area of a building (the total floor area, including upper floors, if any) to the land area is referred to as the "Floor Area Ratio (FAR).`,
     ],
   },
   {
-    id: 109,
+    id: 9,
     answer: [
       `No, financial institutions cannot terminate a lease on behalf of a tenant. 
       Check legal basis.
@@ -106,80 +84,3 @@ const answerData = [
     ],
   },
 ];
-
-const MainPage = () => {
-  const [chatData, setChatData] = useState(initialData);
-  const [step, setStep] = useState(1);
-
-  const onSubmit = (text) => {
-    if (text == "") {
-      alert("Please write correctly..");
-      return;
-    }
-    console.log("text:", text);
-    let chat = {
-      id: chatData.length + 1,
-      isBot: false,
-      content: [text],
-    };
-    setChatData((prev) => [...prev, chat]);
-    // 추가해
-    let Answer = {
-      id: answerData[step - 1].id,
-      isBot: true,
-      content: answerData[step - 1].answer,
-    };
-    setChatData((prev) => [...prev, Answer]);
-    setStep(step + 1);
-  };
-
-  return (
-    <>
-      <LayoutStyled
-        style={{
-          minWidth: "100dvw",
-          minHeight: "100dvh",
-          overflowY: "hidden",
-        }}
-      >
-        <MainMenu selectedKey={"1"} />
-        <Container>
-          <MainHeader />
-          <ChatList chatData={chatData} />
-          <ChatInput onSubmit={onSubmit} />
-        </Container>
-      </LayoutStyled>
-    </>
-  );
-};
-
-const LayoutStyled = styled(Layout)`
-  .ant-layout-sider {
-    background-color: white;
-  }
-
-  .ant-menu-light.ant-menu-root.ant-menu-inline {
-    background-color: transparent;
-    border-inline-end: none;
-  }
-
-  .ant-menu-light .ant-menu-item-selected {
-    //background-color: #d5f2bb;
-  }
-
-  .ant-layout-sider-trigger {
-    background-color: #eee;
-    svg {
-      fill: black;
-    }
-  }
-`;
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100dvh;
-`;
-
-export default MainPage;

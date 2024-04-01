@@ -2,6 +2,10 @@ import { Avatar } from "antd";
 import styled from "styled-components";
 import Logo from "../../assets/images/logo-color.svg";
 import { useEffect, useRef } from "react";
+import ResultChat from "./ResultChat";
+import FinalResultChat from "./FinalResultChat";
+import PayServiceChat from "./PayServiceChat";
+import LinkChat from "./LinkChat";
 
 const ChatList = ({ chatData }) => {
   const chatEndRef = useRef(null);
@@ -9,6 +13,25 @@ const ChatList = ({ chatData }) => {
   useEffect(() => {
     chatEndRef.current.scrollIntoView({ behavior: "smooth" });
   }, [chatData]);
+
+  const decideBotChatContent = (item) => {
+    if (item.id === 104) {
+      return <LinkChat />;
+    } else if (item.id === 105) {
+      return <ResultChat />;
+    } else if (item.id === 106) {
+      return (
+        <>
+          <FinalResultChat />
+          <PayServiceChat />
+        </>
+      );
+    } else {
+      return item?.content.map((value, index) => (
+        <BotChatText key={index}>{value}</BotChatText>
+      ));
+    }
+  };
 
   return (
     <Container>
@@ -20,22 +43,10 @@ const ChatList = ({ chatData }) => {
               <BotChatProfileText>안심전세봇</BotChatProfileText>
             </BotChatProfileBox>
             <BotChatTextBox>
-              {item?.content.map((value, index) => (
+              {decideBotChatContent(item)}
+              {/* {item?.content.map((value, index) => (
                 <BotChatText key={index}>{value}</BotChatText>
-              ))}
-              {/* <BotChatText>
-                ㅇ니라댈ㄷㅎ궈륲ㄴ두팯갸호재ㅑ겨호ㅠ댜겋
-                ㅣ자댜ㅜ래댜로갸허ㅠㄱㅇ니라댈ㄷㅎ궈륲ㄴ두팯갸호재ㅑ겨호ㅠ댜겋
-                ㅣ자댜ㅜ래댜로갸허ㅠㄱ
-              </BotChatText>
-              <BotChatText>ㅇ니라댈ㄷㅎ궈륲ㄴ</BotChatText>
-              <BotChatText>
-                ㅇ니라댈ㄷㅎ궈륲ㄴ두팯갸호재ㅑ겨호ㅠ댜겋
-                ㅣ자댜ㅜ래댜로갸허ㅠㄱㅇ니라댈ㄷㅎ궈륲ㄴ두팯갸호재ㅑ겨호ㅠ댜겋
-                ㅣ자댜ㅜ래댜로갸허ㅠㄱㅇ니라댈ㄷㅎ궈륲ㄴ두팯갸호재ㅑ겨호ㅠ댜겋
-                ㅣ자댜ㅜ래댜로갸허ㅠㄱㅇ니라댈ㄷㅎ궈륲ㄴ두팯갸호재ㅑ겨호ㅠ댜겋
-                ㅣ자댜ㅜ래댜로갸허ㅠㄱ
-              </BotChatText> */}
+              ))} */}
             </BotChatTextBox>
           </BotChatBox>
         ) : (

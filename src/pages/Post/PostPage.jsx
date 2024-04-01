@@ -71,7 +71,7 @@ const PostPage = () => {
                     <LikeOutlined /> | 3
                   </LikeButton>
                 )}
-                <Explain>조회수 26 | 댓글 3</Explain>
+                <Explain>Likes 26 | Comments 3</Explain>
               </ContentBottom>
               <CommentContainer>
                 <CommentBox>
