@@ -40,7 +40,7 @@ const ChatList = ({ chatData }) => {
           <BotChatBox key={item.id}>
             <BotChatProfileBox>
               <BotChatImg src={<img src={Logo} alt="chatBot" />} />
-              <BotChatProfileText>안심전세봇</BotChatProfileText>
+              <BotChatProfileText>Jeonse Bot</BotChatProfileText>
             </BotChatProfileBox>
             <BotChatTextBox>
               {decideBotChatContent(item)}

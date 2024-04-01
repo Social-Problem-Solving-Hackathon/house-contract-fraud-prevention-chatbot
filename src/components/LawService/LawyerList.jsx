@@ -14,7 +14,7 @@ const LawyerList = () => {
 
   return (
     <>
-      <Title>원하는 변호사와 상담해보세요!</Title>
+      <Title>Talk to the lawyer you want!</Title>
       <Container>
         <LeftButton onClick={() => slider.current.prev()}>
           <LeftOutlined style={{ fontSize: "1.5rem" }} />

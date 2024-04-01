@@ -1,3 +1,4 @@
+import { CheckSquareOutlined } from "@ant-design/icons";
 import styled from "styled-components";
 
 const ResultChat = () => {
@@ -7,13 +8,19 @@ const ResultChat = () => {
         I have reviewed the document ‘Certificate of Real Estate Registration’.
       </Title>
       <div>Here are the findings:</div>
-      <StepTitle>Check-point 01:</StepTitle>
+      <StepTitle>
+        <CheckSquareOutlined />
+        Check-point 01:
+      </StepTitle>
       <div>
         The address of the building matches the address listed on the
         certificate of real estate registration. This is a positive result as
         discrepancies could indicate potential issues.
       </div>
-      <StepTitle>Check-point 02:</StepTitle>
+      <StepTitle>
+        <CheckSquareOutlined />
+        Check-point 02:
+      </StepTitle>
       <div>
         The purpose of the building has been assessed, and it has been
         determined that it is not designated for residential use such as
@@ -21,7 +28,10 @@ const ResultChat = () => {
         may pose challenges in obtaining Jeonse loans, as they are typically
         intended for residential properties.
       </div>
-      <StepTitle>Check-point 03:</StepTitle>
+      <StepTitle>
+        <CheckSquareOutlined />
+        Check-point 03:
+      </StepTitle>
       <div>
         The presence of the term &apos;land ownership&apos; has been verified in
         the document. It indicates either &apos;unregistered land
