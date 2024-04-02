@@ -85,7 +85,7 @@ const Img = styled.img`
 `;
 
 const LogoText = styled.div`
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 900;
   color: #103e13;
 `;

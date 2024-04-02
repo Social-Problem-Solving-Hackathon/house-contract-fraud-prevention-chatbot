@@ -16,15 +16,6 @@ const MainHeader = () => {
   return (
     <Container>
       <ButtonContainer>
-        <Avatar
-          style={{
-            backgroundColor: "white",
-            fontSize: "2.1rem",
-            width: "2.1rem",
-            height: "2.1rem",
-          }}
-          icon={<QuestionCircleOutlined style={{ color: "#aab4be" }} />}
-        />
         <Popover
           placement="bottomRight"
           content={content}

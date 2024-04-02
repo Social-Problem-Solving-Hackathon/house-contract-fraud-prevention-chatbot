@@ -13,7 +13,7 @@ const CommunityPage = () => {
     } else if (selectedMenu === 1) {
       return "* This is a bulletin board that shares cases of Jeonse Fraud";
     } else if (selectedMenu === 2) {
-      return "* This is a bulletin board that shares good news and new information.";
+      return "* This is a bulletin board that provides a space for members to support and heal each other.";
     } else if (selectedMenu === 3) {
       return "* This is a bulletin board that shares information related to real estate.";
     }
