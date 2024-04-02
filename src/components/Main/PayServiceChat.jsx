@@ -10,7 +10,13 @@ const PayServiceChat = () => {
       </div>
       <PayButtonBox>
         <PayButton>Yes</PayButton>
-        <PayButton>No</PayButton>
+        <PayButton
+          onClick={() => {
+            confirm("Are you sure you don't want to use the service?");
+          }}
+        >
+          No
+        </PayButton>
       </PayButtonBox>
     </ChatBox>
   );
