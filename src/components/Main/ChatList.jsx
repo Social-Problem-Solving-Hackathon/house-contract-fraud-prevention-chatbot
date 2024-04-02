@@ -26,6 +26,26 @@ const ChatList = ({ chatData }) => {
           <PayServiceChat />
         </>
       );
+    } else if (item.id === 109) {
+      return (
+        <>
+          <BotChatText>
+            <div>
+              No, financial institutions cannot terminate a lease on behalf of a
+              tenant.
+            </div>
+            <div
+              style={{
+                color: "#2194f3",
+                textDecoration: "underline",
+                cursor: "pointer",
+              }}
+            >
+              Check legal basis.
+            </div>
+          </BotChatText>
+        </>
+      );
     } else {
       return item?.content.map((value, index) => (
         <BotChatText key={index}>{value}</BotChatText>

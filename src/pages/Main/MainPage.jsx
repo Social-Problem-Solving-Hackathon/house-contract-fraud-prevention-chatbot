@@ -131,6 +131,10 @@ const MainPage = () => {
     };
     setChatData((prev) => [...prev, chat]);
     setIsLoading(true);
+    if (answerData[step - 1] === undefined) {
+      setIsLoading(false);
+      return;
+    }
     timer = setTimeout(() => {
       let Answer = {
         id: answerData[step - 1].id,
@@ -140,7 +144,7 @@ const MainPage = () => {
       setChatData((prev) => [...prev, Answer]);
       setStep(step + 1);
       setIsLoading(false);
-    }, 2000);
+    }, 1000);
     // 답변 추가해
   };
 
