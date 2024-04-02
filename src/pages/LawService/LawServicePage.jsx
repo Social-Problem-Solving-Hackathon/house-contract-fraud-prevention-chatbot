@@ -30,7 +30,7 @@ const LawServicePage = () => {
                 Quick and accurate brokering legal services{" "}
               </BannerTitle>
               <BannerText>Did you get Jeonse Fraud? Come here!</BannerText>
-              <BannerText>We can minimize damage to Jones Fraud.</BannerText>
+              <BannerText>We can minimize damage to Jeonse Fraud.</BannerText>
               <BannerButton>
                 Ask questions
                 <RightCircleFilled />
@@ -38,7 +38,7 @@ const LawServicePage = () => {
             </BannerBox>
             <ButtonBox>
               <Button>
-                <ButtonText>consultation reservation</ButtonText>
+                <ButtonText>Consultation reservation</ButtonText>
                 <ButtonIcon>
                   <ScheduleTwoTone style={{ fontSize: "1.5rem" }} />
                 </ButtonIcon>
@@ -53,7 +53,7 @@ const LawServicePage = () => {
                 </ButtonIcon>
               </Button>
               <Button>
-                <ButtonText>quick consultation</ButtonText>
+                <ButtonText>Quick consultation</ButtonText>
                 <ButtonIcon>
                   <PhoneTwoTone
                     twoToneColor={"gray"}
@@ -62,7 +62,7 @@ const LawServicePage = () => {
                 </ButtonIcon>
               </Button>
               <Button>
-                <ButtonText>review</ButtonText>
+                <ButtonText>Review</ButtonText>
                 <ButtonIcon>
                   <LikeTwoTone
                     twoToneColor={"#eb2f96"}
@@ -187,7 +187,8 @@ const Button = styled.button`
 const ButtonText = styled.div`
   color: black;
   font-weight: 700;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  text-align: left;
 `;
 
 const ButtonIcon = styled.div`

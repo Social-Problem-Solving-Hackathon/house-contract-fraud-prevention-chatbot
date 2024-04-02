@@ -38,7 +38,7 @@ const PostPage = () => {
                 <div>
                   Andrew
                   <br />
-                  <Date>2023.03.03</Date>
+                  <Date>2024.03.03</Date>
                 </div>
               </Writer>
               <Content>

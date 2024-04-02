@@ -21,7 +21,7 @@ function getItem(label, key, icon, children) {
 }
 const items = [
   getItem("Document Review Chatbot", "1", <CommentOutlined />),
-  getItem("history", "sub2", <HistoryOutlined />, [
+  getItem("History", "sub2", <HistoryOutlined />, [
     getItem("2024.03.30", "5"),
     getItem("2024.03.29", "6"),
     getItem("2024.03.28", "7"),
