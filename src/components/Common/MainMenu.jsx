@@ -27,7 +27,7 @@ const items = [
     getItem("2024.03.28", "7"),
     getItem("2024.03.27", "8"),
   ]),
-  getItem("Brokering legal services", "2", <ContactsOutlined />),
+  getItem("Legal mediation service", "2", <ContactsOutlined />),
   getItem("Community", "3", <TeamOutlined />),
 ];
 
