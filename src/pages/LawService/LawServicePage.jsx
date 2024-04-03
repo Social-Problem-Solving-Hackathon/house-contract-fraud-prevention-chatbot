@@ -27,7 +27,7 @@ const LawServicePage = () => {
           <MenuContainer>
             <BannerBox>
               <BannerTitle>
-                Quick and accurate brokering legal services{" "}
+                Quick and accurate legal mediation services{" "}
               </BannerTitle>
               <BannerText>Did you get Jeonse Fraud? Come here!</BannerText>
               <BannerText>We can minimize damage to Jeonse Fraud.</BannerText>
