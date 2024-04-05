@@ -82,8 +82,8 @@ const ChatBox = styled.div`
   padding: 2rem;
   border-radius: 20px 20px 20px 0;
   background-color: #388e3b;
-  font-size: 1.1rem;
-  font-weight: 500;
+  font-size: 1.3rem;
+  font-weight: 600;
   line-height: 2rem;
   color: white;
   box-shadow: 0px 0px 10px 1px rgb(195, 195, 195);
@@ -105,7 +105,7 @@ const PayButton = styled.div`
   padding: 1.5rem;
   border-radius: 20px;
   background-color: white;
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5rem;
   cursor: pointer;
 
@@ -116,7 +116,7 @@ const PayButton = styled.div`
 
 const ButtonTitle = styled.div`
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   padding-bottom: 0.5rem;
   color: #1b5e1f;
 `;
