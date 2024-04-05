@@ -158,7 +158,8 @@ const BotChatText = styled.div`
   padding: 1.3rem;
   border-radius: 20px 20px 20px 0;
   background-color: #1b5e1f;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
   color: white;
   box-shadow: 0px 0px 10px 1px rgb(195, 195, 195);
 `;
@@ -174,7 +175,8 @@ const MyChatText = styled.div`
   padding: 1.3rem;
   border-radius: 20px 20px 0 20px;
   background-color: #c8e6c9;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  font-weight: 600;
   color: black;
   box-shadow: 0px 0px 10px 1px rgb(195, 195, 195);
 `;
