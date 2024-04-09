@@ -1,5 +1,6 @@
 
 # 사회문제해결을 위한 해커톤
+<img src="https://github.com/Social-Problem-Solving-Hackathon/house-contract-fraud-prevention-chatbot/assets/93020785/06c557f4-1585-4eaf-a007-e4b8c62923ca" width="100" height="100" />
 
 안녕하세요, 전세사기 예방 가이드 안심전세봇 입니다.
 
@@ -23,7 +24,8 @@
 
 ## 2. 프로젝트 소개
 
-필요 서류 업로드만으로 전세사기 위험을 진단하고, Rag와 llm결합으로 더 정확한 질의응답이 가능한 전세사기 예방 가이드 챗봇 서비스입니다.
+필요 서류 업로드만으로 전세사기 위험을 진단하고, RAG와 LLM 결합으로 더 정확한 질의응답이 가능한 전세사기 예방 가이드 챗봇 서비스입니다.
+
 React를 사용하여 웹 서비스 페이지를 구성했습니다.
 
 ## ✨ 서비스 UI
