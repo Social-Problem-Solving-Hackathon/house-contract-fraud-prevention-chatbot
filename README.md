@@ -43,6 +43,7 @@ React를 사용하여 웹 서비스 페이지를 구성했습니다.
 ![유료결제](https://github.com/Social-Problem-Solving-Hackathon/house-contract-fraud-prevention-chatbot/assets/129375059/802695e0-cddc-4265-bb7f-0651c0911f7d)
 전세사기 관련 전문가의 조언을 듣고싶은 경우 유료결제를 진행합니다.
 
+![질의응답](https://github.com/Social-Problem-Solving-Hackathon/house-contract-fraud-prevention-chatbot/assets/129375059/43206c66-d580-41b2-a90b-331d1f0d9104)
 부동산 용어/ 법률/전세사기 수법 등에 관한 사용자의 질문에 답변합니다.
 
 **3️⃣ 추가 기능**
@@ -52,14 +53,14 @@ React를 사용하여 웹 서비스 페이지를 구성했습니다.
 전세사기 피해자 및 부동산 관련 법률 전문가가 필요한 경우 중개합니다.
 
 **2) 커뮤니티**
-
 ![커뮤니티](https://github.com/Social-Problem-Solving-Hackathon/house-contract-fraud-prevention-chatbot/assets/129375059/bbf20ead-f8e6-4488-b7fa-5858c5e89936)
 전세사기 피해 및 부동산 관련 정보를 공유합니다.
 
-추가 기능을 통해 사용자가 전세사기 판별 기능 이용 후에도 지속적으로 서비스를 사용할 수 있습니다.
-
 **3) 개정법률 알림**
+![알림창](https://github.com/Social-Problem-Solving-Hackathon/house-contract-fraud-prevention-chatbot/assets/129375059/e4dca4a8-f0eb-43a5-8b44-f0f1315d7f94)
 부동산 관련 법률이 개정되면 사용자에게 알림하여 관련 정보를 전달합니다.
+
+추가 기능을 통해 사용자가 전세사기 판별 기능 이용 후에도 지속적으로 서비스를 사용할 수 있습니다.
 
 ## RAG 모델 프로세스
 
