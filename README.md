@@ -22,27 +22,39 @@
 ## 2. 프로젝트 소개
 
 필요 서류 업로드만으로 전세사기 위험을 진단하고, Rag와 llm결합으로 더 정확한 질의응답이 가능한 전세사기 예방 가이드 챗봇 서비스입니다.
+React를 사용하여 웹 서비스 페이지를 구성했습니다.
 
 ## ✨ 서비스 UI
 
-1️⃣ 메인 화면
-
-![1_안녕하세요](https://github.com/Social-Problem-Solving-Hackathon/house-contract-fraud-prevention-chatbot/assets/129375059/c7f336aa-a545-4fe7-bda4-494406283b89)
-서류 검토에 필요한 기본 정보를 입력받고, 서류를 다운로드 받을 수 있는 링크를 전달합니다.
+1️⃣ 로그인
+![로그인 화면](https://github.com/Social-Problem-Solving-Hackathon/house-contract-fraud-prevention-chatbot/assets/129375059/69fd70cb-2c82-4f3f-aa36-863f5768fb05)
 
 2️⃣ 전세관련 서류 검토 기능
 
-![2_서류검토결과](https://github.com/Social-Problem-Solving-Hackathon/house-contract-fraud-prevention-chatbot/assets/129375059/1df22b84-77f7-44c2-8556-8a3a39872fad)
-![4_대지권예시_위험](https://github.com/Social-Problem-Solving-Hackathon/house-contract-fraud-prevention-chatbot/assets/129375059/b50eac45-1b3c-4b93-ac40-06a166585b7c)
-![5_대지권예시_안전](https://github.com/Social-Problem-Solving-Hackathon/house-contract-fraud-prevention-chatbot/assets/129375059/6001423c-7b0c-493c-96ac-957c2ef34fd3)
+![채팅1](https://github.com/Social-Problem-Solving-Hackathon/house-contract-fraud-prevention-chatbot/assets/129375059/9a5f5255-a70c-4bb3-9309-b92d0693611b)
+서류 검토에 필요한 기본 정보를 입력받고, 서류를 다운로드 받을 수 있는 링크를 전달합니다.
 
+![서류첨부](https://github.com/Social-Problem-Solving-Hackathon/house-contract-fraud-prevention-chatbot/assets/129375059/1712f5ba-dd7d-46b0-909c-3aadb2f2b2fe)
+![판별결고](https://github.com/Social-Problem-Solving-Hackathon/house-contract-fraud-prevention-chatbot/assets/129375059/18ed5401-8408-4960-a4eb-08eb92645534)
 사용자가 관련 서류를 업로드하면, 검토 후 전세사기 위험을 판별합니다.
 
-3️⃣ 질의응답 챗봇 기능
-
-![3_질의응답](https://github.com/Social-Problem-Solving-Hackathon/house-contract-fraud-prevention-chatbot/assets/129375059/5408f97e-38fc-4c52-9fce-b406f2abe576)
+![유료결제](https://github.com/Social-Problem-Solving-Hackathon/house-contract-fraud-prevention-chatbot/assets/129375059/802695e0-cddc-4265-bb7f-0651c0911f7d)
+전세사기 관련 전문가의 조언을 듣고싶은 경우 유료결제를 진행합니다.
 
 부동산 용어/ 법률/전세사기 수법 등에 관한 사용자의 질문에 답변합니다.
+
+3️⃣ 추가 기능
+
+### 1. 법률 전문가 중개
+![법률중개](https://github.com/Social-Problem-Solving-Hackathon/house-contract-fraud-prevention-chatbot/assets/129375059/ff37c543-e30b-4a60-999a-fbfc45fc7678)
+전세사기 피해자 및 부동산 관련 법률 전문가가 필요한 경우 중개합니다.
+
+### 2. 커뮤니티
+
+![커뮤니티](https://github.com/Social-Problem-Solving-Hackathon/house-contract-fraud-prevention-chatbot/assets/129375059/bbf20ead-f8e6-4488-b7fa-5858c5e89936)
+전세사기 피해 및 부동산 관련 정보를 공유합니다.
+
+추가 기능을 통해 사용자가 전세사기 판별 기능 이용 후에도 지속적으로 서비스를 사용할 수 있습니다.
 ## RAG 모델 프로세스
 
 ### 1. 양자화 설정과 한국어 언어 모델 최적화
