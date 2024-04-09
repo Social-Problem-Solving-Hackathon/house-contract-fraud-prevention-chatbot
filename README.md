@@ -11,6 +11,8 @@
 | 권도영 | 숙명여자대학교     | 앙트러프러너십 전공 | dykwon0312@gmail.com |
 | 문승민 | 인하대학교     | 산업경영공학과 | msm0627@naver.com|
 | 이선경 | 동국대학교     | 컴퓨터공학과| skballet@naver.com |
+| 이나경 | 동국대학교     | 컴퓨터공학과| nakyong7770@gmail.com|
+
 
 ---
 
@@ -26,10 +28,10 @@ React를 사용하여 웹 서비스 페이지를 구성했습니다.
 
 ## ✨ 서비스 UI
 
-1️⃣ 로그인
+**1️⃣ 로그인**
 ![로그인 화면](https://github.com/Social-Problem-Solving-Hackathon/house-contract-fraud-prevention-chatbot/assets/129375059/69fd70cb-2c82-4f3f-aa36-863f5768fb05)
 
-2️⃣ 전세관련 서류 검토 기능
+**2️⃣ 전세관련 서류 검토 기능**
 
 ![채팅1](https://github.com/Social-Problem-Solving-Hackathon/house-contract-fraud-prevention-chatbot/assets/129375059/9a5f5255-a70c-4bb3-9309-b92d0693611b)
 서류 검토에 필요한 기본 정보를 입력받고, 서류를 다운로드 받을 수 있는 링크를 전달합니다.
@@ -43,18 +45,22 @@ React를 사용하여 웹 서비스 페이지를 구성했습니다.
 
 부동산 용어/ 법률/전세사기 수법 등에 관한 사용자의 질문에 답변합니다.
 
-3️⃣ 추가 기능
+**3️⃣ 추가 기능**
 
-### 1. 법률 전문가 중개
+**1) 법률 전문가 중개**
 ![법률중개](https://github.com/Social-Problem-Solving-Hackathon/house-contract-fraud-prevention-chatbot/assets/129375059/ff37c543-e30b-4a60-999a-fbfc45fc7678)
 전세사기 피해자 및 부동산 관련 법률 전문가가 필요한 경우 중개합니다.
 
-### 2. 커뮤니티
+**2) 커뮤니티**
 
 ![커뮤니티](https://github.com/Social-Problem-Solving-Hackathon/house-contract-fraud-prevention-chatbot/assets/129375059/bbf20ead-f8e6-4488-b7fa-5858c5e89936)
 전세사기 피해 및 부동산 관련 정보를 공유합니다.
 
 추가 기능을 통해 사용자가 전세사기 판별 기능 이용 후에도 지속적으로 서비스를 사용할 수 있습니다.
+
+**3) 개정법률 알림**
+부동산 관련 법률이 개정되면 사용자에게 알림하여 관련 정보를 전달합니다.
+
 ## RAG 모델 프로세스
 
 ### 1. 양자화 설정과 한국어 언어 모델 최적화
